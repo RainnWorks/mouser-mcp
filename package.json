@@ -1,8 +1,33 @@
 {
-  "name": "mouser-mcp",
+  "name": "@rainnworks/mouser-mcp",
   "version": "0.1.0",
+  "description": "MCP server for the Mouser Electronics APIs: part search, cart, orders and order history",
+  "license": "Apache-2.0",
   "type": "module",
-  "bin": { "mouser-mcp": "server.js" },
-  "scripts": { "start": "node server.js" },
-  "dependencies": { "@modelcontextprotocol/sdk": "1.32.2" }
+  "bin": {
+    "mouser-mcp": "server.js"
+  },
+  "files": [
+    "server.js",
+    "src",
+    "spec"
+  ],
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "update-specs": "curl -fsS https://api.mouser.com/api/docs/V1 -o spec/v1.json && curl -fsS https://api.mouser.com/api/docs/V2 -o spec/v2.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RainnWorks/mouser-mcp.git"
+  },
+  "homepage": "https://github.com/RainnWorks/mouser-mcp#readme",
+  "bugs": "https://github.com/RainnWorks/mouser-mcp/issues",
+  "keywords": ["mcp", "model-context-protocol", "mouser", "electronics", "components", "claude"],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2"
+  }
 }

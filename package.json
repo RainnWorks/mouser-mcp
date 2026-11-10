@@ -1,0 +1,8 @@
+{
+  "name": "mouser-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": { "mouser-mcp": "server.js" },
+  "scripts": { "start": "node server.js" },
+  "dependencies": { "@modelcontextprotocol/sdk": "1.32.2" }
+}
